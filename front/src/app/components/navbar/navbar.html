@@ -1,0 +1,117 @@
+<nav
+  class="fixed top-0 left-0 w-full bg-slate-900/90 backdrop-blur-sm border-b border-slate-800 z-50"
+  aria-label="Menú principal"
+>
+  <div
+    class="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between"
+  >
+    <!-- Logo -->
+    <a
+      href="#inicio"
+      class="flex items-center space-x-3 text-sky-400 font-extrabold text-2xl"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-8 h-8 bg-sky-400 rounded-md p-1 text-slate-900"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
+        />
+      </svg>
+      <span>IñakiSP</span>
+    </a>
+
+    <!-- Menu desktop -->
+    <ul class="hidden md:flex space-x-10 text-gray-300 text-lg font-medium">
+      <li>
+        <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
+      </li>
+      <li>
+        <a href="#sobre-mi" class="hover:text-white transition-colors"
+          >Sobre Mí</a
+        >
+      </li>
+      <li>
+        <a href="#habilidades" class="hover:text-white transition-colors"
+          >Habilidades</a
+        >
+      </li>
+      <li>
+        <a href="#experiencia" class="hover:text-white transition-colors"
+          >Experiencia</a
+        >
+      </li>
+      <li>
+        <a href="#contacto" class="hover:text-white transition-colors"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+
+    <!-- Botón hamburguesa móvil -->
+    <button
+      (click)="toggleMenu()"
+      class="md:hidden focus:outline-none"
+      aria-label="Abrir menú"
+    >
+      <svg
+        class="w-8 h-8 text-gray-300"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        @if (!isMenuOpen) {
+        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        } @else {
+        <path d="M6 18L18 6M6 6l12 12"></path>
+        }
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menú móvil -->
+  @if (isMenuOpen) {
+  <div
+    class="md:hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-800"
+  >
+    <ul
+      class="flex flex-col space-y-4 py-6 px-6 text-gray-300 font-medium text-lg"
+    >
+      <li>
+        <a href="#inicio" class="block hover:text-white transition-colors"
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a href="#sobre-mi" class="block hover:text-white transition-colors"
+          >Sobre Mí</a
+        >
+      </li>
+      <li>
+        <a href="#habilidades" class="block hover:text-white transition-colors"
+          >Habilidades</a
+        >
+      </li>
+      <li>
+        <a href="#experiencia" class="block hover:text-white transition-colors"
+          >Experiencia</a
+        >
+      </li>
+      <li>
+        <a href="#contacto" class="block hover:text-white transition-colors"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </div>
+  }
+</nav>
