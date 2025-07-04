@@ -81,33 +81,48 @@
   <!-- Menú móvil -->
   @if (isMenuOpen) {
   <div
-    class="md:hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-800"
+    class="md:hidden bg-slate-900/90 backdrop-blur-sm border-t border-slate-800 h-screen flex items-center justify-center"
   >
     <ul
-      class="flex flex-col space-y-4 py-6 px-6 text-gray-300 font-medium text-lg"
+      class="flex flex-col space-y-8 text-gray-300 font-medium text-xl text-center"
     >
       <li>
-        <a href="#inicio" class="block hover:text-white transition-colors"
+        <a
+          href="#inicio"
+          class="block hover:text-white transition-colors"
+          (click)="toggleMenu()"
           >Inicio</a
         >
       </li>
       <li>
-        <a href="#sobre-mi" class="block hover:text-white transition-colors"
+        <a
+          href="#sobre-mi"
+          class="block hover:text-white transition-colors"
+          (click)="toggleMenu()"
           >Sobre Mí</a
         >
       </li>
       <li>
-        <a href="#habilidades" class="block hover:text-white transition-colors"
+        <a
+          href="#habilidades"
+          class="block hover:text-white transition-colors"
+          (click)="toggleMenu()"
           >Habilidades</a
         >
       </li>
       <li>
-        <a href="#experiencia" class="block hover:text-white transition-colors"
+        <a
+          href="#experiencia"
+          class="block hover:text-white transition-colors"
+          (click)="toggleMenu()"
           >Experiencia</a
         >
       </li>
       <li>
-        <a href="#contacto" class="block hover:text-white transition-colors"
+        <a
+          href="#contacto"
+          class="block hover:text-white transition-colors"
+          (click)="toggleMenu()"
           >Contacto</a
         >
       </li>
